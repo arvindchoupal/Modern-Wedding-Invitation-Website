@@ -1,21 +1,26 @@
-import { useState, useEffect, useRef } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import { WeddingCard } from "./components/WeddingCard";
-import { StoryReveal } from "./components/StoryReveal";
-import { Gallery } from "./components/Gallery";
-import { Volume2, VolumeX } from "lucide-react";
-import aud from "./reel.mp3";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import ReactGA from "react-ga4";
 import Arvind from "./arvind";
 import Ajit from "./ajir";
 
+// const TRACKING_ID = "G-KSGJBCBQ00";
+// ReactGA.initialize(TRACKING_ID);
+
 export default function App() {
- 
+  const location = useLocation();
+
+//   useEffect(() => {
+//     ReactGA.send({
+//       hitType: "pageview",
+//       page: location.pathname + location.search,
+//     });
+//   }, [location]);
 
   return (
-
-      <Routes>
-        <Route path="/" element={<Arvind />} />
-        <Route path="/Ajit" element={<Ajit />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Arvind />} />
+      <Route path="/Ajit" element={<Ajit />} />
+    </Routes>
   );
 }
