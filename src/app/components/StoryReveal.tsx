@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, Heart, Calendar, MapPin, Clock, Sparkles, ArrowLeft } from "lucide-react";
 
@@ -79,6 +79,14 @@ export function StoryReveal({ onBack }: { onBack: () => void }) {
       setShowDetails(true);
     }
   };
+
+  // Auto-advance after 5 seconds if user doesn't click
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      nextStep();
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [currentStep, showDetails]);
 
   const currentStepData = steps[currentStep];
 

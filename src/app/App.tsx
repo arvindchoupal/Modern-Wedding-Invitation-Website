@@ -29,6 +29,10 @@ export default function App() {
     }
   };
 
+  const handleCardOpen = () => {
+    setCardOpened(true);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-red-50 to-orange-50">
       {/* Background Music */}
@@ -63,7 +67,7 @@ export default function App() {
       )}
 
       {!cardOpened ? (
-        <WeddingCard onOpen={() => setCardOpened(true)} />
+        <WeddingCard onOpen={handleCardOpen} />
       ) : (
         <StoryReveal onBack={() => setCardOpened(false)} />
       )}
