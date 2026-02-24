@@ -496,6 +496,8 @@ function WeddingDetails() {
               <MapPin className="text-red-950 md:hidden" size={20} />
               <MapPin className="text-red-950 hidden md:block" size={28} />
             </div>
+
+
             <div className="flex-1 min-w-0">
               <h4 className="text-lg sm:text-xl font-semibold text-yellow-300 mb-1" style={{ fontFamily: 'serif' }}>स्थान</h4>
               <p 
@@ -509,6 +511,8 @@ function WeddingDetails() {
   Village kathi, Bihar
 </p>
             </div>
+
+            
           </div>
         </div>
       </motion.div>
