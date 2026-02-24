@@ -232,7 +232,7 @@ export function AjitWeddingCard({ onOpen }: WeddingCardProps) {
                 >
                   <div className="bg-gradient-to-r from-red-950/70 to-orange-950/70 rounded-2xl p-6 border-2 border-yellow-600 backdrop-blur-sm">
                     <h2 className="text-4xl md:text-5xl text-yellow-300 font-bold mb-3" style={{ fontFamily: 'serif' }}>
-                      Husband
+                    अजीत
                     </h2>
                     <div className="flex justify-center items-center gap-3 my-4">
                       <div className="h-px bg-yellow-500 w-12"></div>
@@ -240,7 +240,7 @@ export function AjitWeddingCard({ onOpen }: WeddingCardProps) {
                       <div className="h-px bg-yellow-500 w-12"></div>
                     </div>
                     <h2 className="text-4xl md:text-5xl text-yellow-300 font-bold" style={{ fontFamily: 'serif' }}>
-                      Wife
+                    संजना
                     </h2>
                   </div>
                 </motion.div>

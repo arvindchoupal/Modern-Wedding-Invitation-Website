@@ -27,12 +27,12 @@ const steps = [
     family: {
       groom: "श्री कमलेश्वरी चौपाल के सुपुत्र",
       groomEn: "Son of Shri Kamleshwari Choupal",
-      groomName: "husband",
+      groomName: "अजीत",
       bride: "श्री विनोद चौपाल की सुपुत्री",
       brideEn: "Daughter of Shri Vinod Choupal",
-      brideName: "wife"
+      brideName: "संजना"
     },
-    verse: "हाथों में मेंहदी रचाई होगी,\nमाथे पर बिंदिया सजाई होगी।\husband लाएगा wife को अपने आँगन,\nशायद wife ने husband को दुआओं में सजाया होगा।",
+    verse: "हाथों में मेंहदी रचाई होगी,\nमाथे पर बिंदिया सजाई होगी।\अजीत लाएगा संजना को अपने आँगन,\nशायद संजना ने अजीत को दुआओं में सजाया होगा।",
     icon: "💑",
     color: "from-purple-900 via-red-900 to-orange-900"
   },
@@ -219,24 +219,24 @@ export function AjitStoryReveal({ onBack }: { onBack: () => void }) {
                               <p className="text-xl sm:text-2xl md:text-3xl text-yellow-200 mb-1 md:mb-2 font-bold" style={{ fontFamily: 'serif' }}>
                                 {currentStepData.family.groomName}
                               </p>
-                              <p className="text-base sm:text-lg md:text-xl text-yellow-300/90" style={{ fontFamily: 'serif' }}>
+                              {/* <p className="text-base sm:text-lg md:text-xl text-yellow-300/90" style={{ fontFamily: 'serif' }}>
                                 {currentStepData.family.groom}
-                              </p>
-                              <p className="text-yellow-200/70 text-xs sm:text-sm md:text-base italic mt-1">
+                              </p> */}
+                              {/* <p className="text-yellow-200/70 text-xs sm:text-sm md:text-base italic mt-1">
                                 {currentStepData.family.groomEn}
-                              </p>
+                              </p> */}
                             </div>
                             
                             <div className="bg-red-950/40 rounded-lg md:rounded-xl p-3 md:p-4 border border-yellow-600/30">
                               <p className="text-xl sm:text-2xl md:text-3xl text-yellow-200 mb-1 md:mb-2 font-bold" style={{ fontFamily: 'serif' }}>
                                 {currentStepData.family.brideName}
                               </p>
-                              <p className="text-base sm:text-lg md:text-xl text-yellow-300/90" style={{ fontFamily: 'serif' }}>
+                              {/* <p className="text-base sm:text-lg md:text-xl text-yellow-300/90" style={{ fontFamily: 'serif' }}>
                                 {currentStepData.family.bride}
                               </p>
                               <p className="text-yellow-200/70 text-xs sm:text-sm md:text-base italic mt-1">
                                 {currentStepData.family.brideEn}
-                              </p>
+                              </p> */}
                             </div>
                           </div>
                         )}
@@ -322,7 +322,7 @@ function WeddingDetails() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useState(() => {
-    const weddingDate = new Date("2026-03-13T00:00:00").getTime();
+    const weddingDate = new Date("2026-03-11T00:00:00").getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const difference = weddingDate - now;
@@ -362,14 +362,14 @@ function WeddingDetails() {
           
           <div className="bg-orange-950/50 rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 border-2 border-yellow-700 mb-4 md:mb-6">
             <h1 className="text-3xl sm:text-4xl md:text-7xl text-yellow-300 mb-2 md:mb-3 font-bold" style={{ fontFamily: 'serif' }}>
-              Husband
+            अजीत
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-yellow-200/90 mb-1" style={{ fontFamily: 'serif' }}>
+            {/* <p className="text-base sm:text-lg md:text-xl text-yellow-200/90 mb-1" style={{ fontFamily: 'serif' }}>
               श्री कमलेश्वरी चौपाल के सुपुत्र
-            </p>
-            <p className="text-yellow-200/70 text-xs sm:text-sm italic">
+            </p> */}
+            {/* <p className="text-yellow-200/70 text-xs sm:text-sm italic">
               Son of Shri Kamleshwari Choupal
-            </p>
+            </p> */}
           </div>
           
           <motion.div
@@ -382,14 +382,14 @@ function WeddingDetails() {
           
           <div className="bg-orange-950/50 rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 border-2 border-yellow-700 mb-4 md:mb-6">
             <h1 className="text-3xl sm:text-4xl md:text-7xl text-yellow-300 mb-2 md:mb-3 font-bold" style={{ fontFamily: 'serif' }}>
-              Wife
+            संजना
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-yellow-200/90 mb-1" style={{ fontFamily: 'serif' }}>
+            {/* <p className="text-base sm:text-lg md:text-xl text-yellow-200/90 mb-1" style={{ fontFamily: 'serif' }}>
              wife father
-            </p>
-            <p className="text-yellow-200/70 text-xs sm:text-sm italic">
+            </p> */}
+            {/* <p className="text-yellow-200/70 text-xs sm:text-sm italic">
               Daughter of wife father
-            </p>
+            </p> */}
           </div>
 
           <div className="mt-6 md:mt-8 flex justify-center gap-3 md:gap-4 text-2xl md:text-3xl">
@@ -462,10 +462,21 @@ function WeddingDetails() {
               <Calendar className="text-red-950 hidden md:block" size={28} />
             </div>
             <div className="flex-1 min-w-0">
-              <h4 className="text-lg sm:text-xl font-semibold text-yellow-300 mb-1" style={{ fontFamily: 'serif' }}>तिथि</h4>
-              <p className="text-yellow-100 text-base sm:text-lg break-words">शुक्रवार, १३ मार्च २०२६</p>
-              <p className="text-yellow-200/70 text-xs sm:text-sm italic">Friday, 13th March 2026</p>
-            </div>
+  <h4 
+    className="text-lg sm:text-xl font-semibold text-yellow-300 mb-1" 
+    style={{ fontFamily: 'serif' }}
+  >
+    तिथि
+  </h4>
+
+  <p className="text-yellow-100 text-base sm:text-lg break-words">
+    बुधवार, ११ मार्च २०२६
+  </p>
+
+  <p className="text-yellow-200/70 text-xs sm:text-sm italic">
+    Wednesday, 11th March 2026
+  </p>
+</div>
           </div>
           
           <div className="flex items-start gap-3 md:gap-4 bg-orange-950/50 rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 border-2 border-yellow-700">
@@ -487,8 +498,16 @@ function WeddingDetails() {
             </div>
             <div className="flex-1 min-w-0">
               <h4 className="text-lg sm:text-xl font-semibold text-yellow-300 mb-1" style={{ fontFamily: 'serif' }}>स्थान</h4>
-              <p className="text-yellow-100 text-base sm:text-lg" style={{ fontFamily: 'serif' }}>ग्राम - कोचगांव</p>
-              <p className="text-yellow-200/70 text-sm sm:text-base">Village Kochgaon, Bihar</p>
+              <p 
+  className="text-yellow-100 text-base sm:text-lg" 
+  style={{ fontFamily: 'serif' }}
+>
+  ग्राम - मीरापट्टी
+</p>
+
+<p className="text-yellow-200/70 text-sm sm:text-base">
+  Village Meerpatti, Bihar
+</p>
             </div>
           </div>
         </div>
