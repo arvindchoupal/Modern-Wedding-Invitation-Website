@@ -20,7 +20,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Arvind />} />
-      <Route path="/Ajit" element={<Ajit />} />
+      <Route path="/Ajit_Sanjana" element={<Ajit />} />
     </Routes>
   );
 }
