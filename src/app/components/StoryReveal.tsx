@@ -84,7 +84,7 @@ export function StoryReveal({ onBack }: { onBack: () => void }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       nextStep();
-    }, 5000);
+    }, 8000);
     return () => clearTimeout(timer);
   }, [currentStep, showDetails]);
 
