@@ -502,11 +502,11 @@ function WeddingDetails() {
   className="text-yellow-100 text-base sm:text-lg" 
   style={{ fontFamily: 'serif' }}
 >
-  ग्राम - मीरापट्टी
+  ग्राम - कटही
 </p>
 
 <p className="text-yellow-200/70 text-sm sm:text-base">
-  Village Meerpatti, Bihar
+  Village kathi, Bihar
 </p>
             </div>
           </div>
